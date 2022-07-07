@@ -139,6 +139,8 @@ function endPlayback() {
   playback_but.textContent = "Playback";
 }
 function playbackMain() {
+  //we got called, pop the ip out
+  cancelAnimationFrame(playbackID);
   if (app_mode != MODE_PLAYBACK) {
     return;
   }
